@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('target_lists', function (Blueprint $table) {
-            $table->id();
+            $table->id()->comment('リストID');
+            $table->string('name')->comment('抽選対象者のリスト名');
             $table->timestamps();
         });
     }
